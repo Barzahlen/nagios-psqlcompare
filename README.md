@@ -37,7 +37,7 @@ This is an open source project and your contribution is very much appreciated.
 
 
 ## Changelog
-See [CHANGELOG.md](changelog.md)
+See [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 PSQLCompare is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
