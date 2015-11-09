@@ -26,7 +26,7 @@ will exit CRITICAL and tell you which querystring does not match the reference. 
 
 ## Known issues
 
-The check does not validate neither the connection string nor the query.
+The check validates neither the connection string nor the query.
 
 ## Contributing
 This is an open source project and your contribution is very much appreciated.
