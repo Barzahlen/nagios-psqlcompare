@@ -51,6 +51,10 @@ func main() {
 					fmt.Printf("UNKNOWN - Query %v does not have the right format! It probably misses the '#' delimiter.\n", i)
 					os.Exit(3)
 				}
+				// Check if the protocol is there and add it if not
+				if ! strings.HasPrefix(args[0], "postgres://") {
+					args[0] = "postgres://" + args[0]
+				}
 				// Execute the query and save the output to the new slice - Exit if an error occures
 				cmd := exec.Command("psql", "-At", args[0], "-c", args[1])
 				out, err := cmd.Output()

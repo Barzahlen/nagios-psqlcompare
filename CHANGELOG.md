@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.1] - 2016-09-28
+- Made the "postgres://" protocol prefix optional by adding it if it's missing
+
 ## [1.1.0] - 2015-06-11
 - Added validation for the complete querystring (for correct delimiter use)
 - The psql output now only includes the wanted result value (psql -At) which is used for comparison

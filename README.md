@@ -5,9 +5,17 @@ or more (PostgreSQL) strings containing a pair of a connection string and a quer
 
     "postgres://user:password@hostOrIP:Port/DBname#Query"
 
+or
+
+    "user::password@hostOrIP:Port/DBname#Query"
+
 which can be something like this
 
     "postgres://myuser:secretpassword@localhost:5432/myapp#SELECT id FROM randomtable WHERE columnx = 23"
+
+or
+
+    "myuser:secretpassword@localhost:5432/myapp#SELECT id FROM randomtable WHERE columnx = 23"
 
 ## Installation
 Just clone the repo and built it with
@@ -23,6 +31,7 @@ You can find them in the Releases tab.
 It will split up the querystrings for the connection and query parts and get the output of the query parts in a new slice. After that
 it compares all slice values with the first querystring output as a reference. If it finds differences in the output values the check
 will exit CRITICAL and tell you which querystring does not match the reference. Otherwise the check will return OK.
+Starting with psqlcompare v1.1.1 the "postgres://" protocol prefix is optional and can be omitted to reduce string length.
 
 ## Known issues
 
